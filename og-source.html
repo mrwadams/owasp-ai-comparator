@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+  Source for og.png, the social preview card (1200x630).
+  Regenerate after editing:
+
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless --disable-gpu --hide-scrollbars \
+      --screenshot=og.png --window-size=1200,630 \
+      --virtual-time-budget=6000 http://localhost:8000/og-source.html
+
+  Serve the directory first (python3 -m http.server) so the webfonts load.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #141517;
+    color: #e2e2e4;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px;
+    position: relative;
+  }
+  .rule {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    display: flex;
+  }
+  .rule span { flex: 1; }
+
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 19px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #40b5a8;
+    margin-bottom: 26px;
+  }
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #e2e2e4;
+  }
+  h1 .accent { color: #40b5a8; }
+  .sub {
+    margin-top: 26px;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #9a9ba2;
+    max-width: 830px;
+  }
+
+  .lists { display: flex; gap: 12px; margin-top: 40px; }
+  .chip {
+    font-family: 'Space Mono', monospace;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 11px 17px;
+    border-radius: 6px;
+    background: #1c1d21;
+    border: 1px solid #36383e;
+    border-left-width: 4px;
+  }
+
+  footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .url {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color: #e2e2e4;
+  }
+  .stats { display: flex; gap: 52px; }
+  .stat-n {
+    font-family: 'Space Mono', monospace;
+    font-size: 44px;
+    font-weight: 700;
+    color: #40b5a8;
+    line-height: 1;
+  }
+  .stat-l {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #606168;
+    margin-top: 9px;
+  }
+</style>
+</head>
+<body>
+  <div class="rule">
+    <span style="background:#e07850"></span>
+    <span style="background:#45a88f"></span>
+    <span style="background:#d4a843"></span>
+    <span style="background:#d06080"></span>
+    <span style="background:#5c9ecf"></span>
+  </div>
+
+  <div>
+    <div class="eyebrow">OWASP AI Top 10 Comparator</div>
+    <h1>Five Top 10 lists.<br><span class="accent">One comparison.</span></h1>
+    <div class="sub">Where OWASP&#8217;s AI security lists overlap, where the gaps are, and which ones matter for your stack.</div>
+    <div class="lists">
+      <div class="chip" style="border-left-color:#e07850">LLM Apps</div>
+      <div class="chip" style="border-left-color:#45a88f">Agentic Apps</div>
+      <div class="chip" style="border-left-color:#d4a843">MCP</div>
+      <div class="chip" style="border-left-color:#d06080">Skills</div>
+      <div class="chip" style="border-left-color:#5c9ecf">ML Security</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="url">owaspai.matt-adams.co.uk</div>
+    <div class="stats">
+      <div>
+        <div class="stat-n">5</div>
+        <div class="stat-l">Top 10 lists</div>
+      </div>
+      <div>
+        <div class="stat-n">50</div>
+        <div class="stat-l">Risks mapped</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
