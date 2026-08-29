@@ -8,7 +8,7 @@ Live at [owaspai.matt-adams.co.uk](https://owaspai.matt-adams.co.uk)
 
 | List | Status | Version |
 |------|--------|---------|
-| [LLM Applications Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | Flagship | 2025 |
+| [LLM Applications Top 10](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) | Flagship | 2026 |
 | [Agentic Applications Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | Peer-reviewed | 2026 |
 | [MCP Top 10](https://owasp.org/www-project-mcp-top-10/) | Beta | v0.1 |
 | [Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/) | New project | 2026 |

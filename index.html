@@ -1136,7 +1136,7 @@
     <div class="container">
       <p>Built from OWASP project data, April 2026. Not affiliated with OWASP Foundation.</p>
       <p style="margin-top: 8px;">
-        <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">LLM Top 10</a> ·
+        <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">LLM Top 10</a> ·
         <a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">Agentic Top 10</a> ·
         <a href="https://owasp.org/www-project-mcp-top-10/">MCP Top 10</a> ·
         <a href="https://owasp.org/www-project-agentic-skills-top-10/">Agentic Skills Top 10</a> ·
@@ -1149,7 +1149,7 @@
     // ===== DATA =====
 
     const LISTS = [
-      { id: 'llm', name: 'LLM Applications', shortName: 'LLM Apps', version: '2025', year: 2025, status: 'Flagship', maturity: 5, color: '#e07850', url: 'https://owasp.org/www-project-top-10-for-large-language-model-applications/' },
+      { id: 'llm', name: 'LLM Applications', shortName: 'LLM Apps', version: '2026', year: 2026, status: 'Flagship', maturity: 5, color: '#e07850', url: 'https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/' },
       { id: 'agentic', name: 'Agentic Applications', shortName: 'Agentic Apps', version: '2026', year: 2026, status: 'Peer-reviewed', maturity: 5, color: '#45a88f', url: 'https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/' },
       { id: 'mcp', name: 'MCP Top 10', shortName: 'MCP', version: 'v0.1', year: 2025, status: 'Beta', maturity: 2, color: '#d4a843', url: 'https://owasp.org/www-project-mcp-top-10/' },
       { id: 'skills', name: 'Agentic Skills', shortName: 'Skills', version: '2026', year: 2026, status: 'New project', maturity: 1, color: '#d06080', url: 'https://owasp.org/www-project-agentic-skills-top-10/' },
@@ -1173,43 +1173,43 @@
       // LLM Top 10
       { id: 'LLM01', listId: 'llm', name: 'Prompt Injection', desc: 'Crafted inputs trick an LLM into doing things it shouldn\'t, from leaking data to running unauthorized actions.', themes: ['injection'], related: ['ASI01', 'MCP06', 'ML01'] },
       { id: 'LLM02', listId: 'llm', name: 'Sensitive Information Disclosure', desc: 'The LLM leaks private data, credentials, or API keys in its responses. Could come from training data or from context it shouldn\'t be sharing.', themes: ['data-leakage'], related: ['ASI09', 'MCP01', 'MCP10', 'ML03'] },
-      { id: 'LLM03', listId: 'llm', name: 'Supply Chain', desc: 'Compromised third-party models, datasets, or plugins get pulled into your LLM application and undermine its integrity.', themes: ['supply-chain'], related: ['ASI04', 'MCP04', 'AST02', 'ML06'] },
-      { id: 'LLM04', listId: 'llm', name: 'Data and Model Poisoning', desc: 'Someone tampers with training data, fine-tuning, or embeddings to plant vulnerabilities, biases, or backdoors.', themes: ['data-poisoning'], related: ['ASI10', 'ML02', 'ML10'] },
-      { id: 'LLM05', listId: 'llm', name: 'Improper Output Handling', desc: 'LLM output gets passed to downstream systems without validation, which can mean code execution or other exploits.', themes: ['output-integrity'], related: ['ML09'] },
-      { id: 'LLM06', listId: 'llm', name: 'Excessive Agency', desc: 'The LLM has too much autonomy, too many permissions, or access to too many tools, and it acts outside its intended scope.', themes: ['privilege'], related: ['ASI03', 'MCP02', 'AST03'] },
-      { id: 'LLM07', listId: 'llm', name: 'System Prompt Leakage', desc: 'Internal system prompts get exposed, revealing sensitive instructions, credentials, or operational logic that should stay hidden.', themes: ['data-leakage'], related: ['MCP10'] },
-      { id: 'LLM08', listId: 'llm', name: 'Vector and Embedding Weaknesses', desc: 'RAG systems and vector databases can be poisoned or accessed in unintended ways, corrupting retrieval results.', themes: ['data-poisoning'], related: ['ASI06', 'ML02'] },
-      { id: 'LLM09', listId: 'llm', name: 'Misinformation', desc: 'The LLM produces false or misleading output that looks credible, including hallucinated facts and fabricated citations.', themes: ['output-integrity'], related: [] },
-      { id: 'LLM10', listId: 'llm', name: 'Unbounded Consumption', desc: 'Uncontrolled resource usage causes costs to spiral, services to degrade, or systems to go down entirely.', themes: ['denial'], related: [] },
+      { id: 'LLM03', listId: 'llm', name: 'Excessive Agency', desc: 'The LLM has too much autonomy, too many permissions, or access to too many tools, and it acts outside its intended scope.', themes: ['privilege'], related: ['ASI03', 'MCP02', 'AST03'] },
+      { id: 'LLM04', listId: 'llm', name: 'Supply Chain', desc: 'Compromised third-party models, datasets, or plugins get pulled into your LLM application and undermine its integrity.', themes: ['supply-chain'], related: ['ASI04', 'MCP04', 'AST02', 'ML06'] },
+      { id: 'LLM05', listId: 'llm', name: 'Data and Model Poisoning', desc: 'Someone tampers with training data, fine-tuning, or embeddings to plant vulnerabilities, biases, or backdoors.', themes: ['data-poisoning'], related: ['ASI10', 'ML02', 'ML10'] },
+      { id: 'LLM06', listId: 'llm', name: 'Unbounded Consumption', desc: 'Uncontrolled resource usage causes costs to spiral, services to degrade, or systems to go down entirely.', themes: ['denial'], related: [] },
+      { id: 'LLM07', listId: 'llm', name: 'Misinformation', desc: 'The LLM produces false or misleading output that looks credible, including hallucinated facts and fabricated citations.', themes: ['output-integrity'], related: [] },
+      { id: 'LLM08', listId: 'llm', name: 'Hidden Context Exposure', desc: 'Context the user was never meant to see gets exposed: system and developer instructions, internal configuration, retrieved policies, application workflows, user roles, and tool or function schemas.', themes: ['data-leakage'], related: ['MCP10'] },
+      { id: 'LLM09', listId: 'llm', name: 'Vector and Embedding Weaknesses', desc: 'RAG systems and vector databases can be poisoned or accessed in unintended ways, corrupting retrieval results.', themes: ['data-poisoning'], related: ['ASI06', 'ML02'] },
+      { id: 'LLM10', listId: 'llm', name: 'Improper Output Handling', desc: 'LLM output gets passed to downstream systems without validation, which can mean code execution or other exploits.', themes: ['output-integrity'], related: ['ML09'] },
 
       // Agentic Applications Top 10
       { id: 'ASI01', listId: 'agentic', name: 'Agent Goal Hijack', desc: 'An attacker redirects what the agent is trying to do, usually via prompt injection or poisoned context, and the agent starts working for them instead.', themes: ['injection'], related: ['LLM01', 'MCP06', 'ML01'] },
       { id: 'ASI02', listId: 'agentic', name: 'Tool Misuse', desc: 'The agent uses a legitimate tool in a way nobody intended. It has permission, technically, but the outcome is harmful.', themes: ['privilege'], related: ['MCP03', 'AST01'] },
-      { id: 'ASI03', listId: 'agentic', name: 'Identity & Privilege Abuse', desc: 'Agents inherit or get delegated credentials without proper scoping, so it\'s unclear who did what and with whose authority.', themes: ['privilege'], related: ['LLM06', 'MCP02', 'MCP07', 'AST03'] },
-      { id: 'ASI04', listId: 'agentic', name: 'Agentic Supply Chain', desc: 'The classic supply chain problem, but now it includes MCP servers, agent cards, tool registries, and anything else agents pull in at runtime.', themes: ['supply-chain'], related: ['LLM03', 'MCP04', 'AST01', 'AST02'] },
+      { id: 'ASI03', listId: 'agentic', name: 'Identity & Privilege Abuse', desc: 'Agents inherit or get delegated credentials without proper scoping, so it\'s unclear who did what and with whose authority.', themes: ['privilege'], related: ['LLM03', 'MCP02', 'MCP07', 'AST03'] },
+      { id: 'ASI04', listId: 'agentic', name: 'Agentic Supply Chain', desc: 'The classic supply chain problem, but now it includes MCP servers, agent cards, tool registries, and anything else agents pull in at runtime.', themes: ['supply-chain'], related: ['LLM04', 'MCP04', 'AST01', 'AST02'] },
       { id: 'ASI05', listId: 'agentic', name: 'Unexpected Code Execution', desc: 'Agents write and run code that bypasses normal controls. Includes the "vibe coding" problem where generated code just gets executed.', themes: ['isolation'], related: ['MCP05', 'AST05'] },
       { id: 'ASI06', listId: 'agentic', name: 'Memory & Context Poisoning', desc: 'An attacker corrupts the agent\'s persistent memory or shared context, and that corruption carries across future sessions.', themes: ['data-poisoning'], related: ['MCP03', 'MCP10', 'ML02'] },
       { id: 'ASI07', listId: 'agentic', name: 'Insecure Inter-Agent Communication', desc: 'Agents talk to each other over protocols that lack proper authentication or validation. An attacker can impersonate a trusted agent.', themes: ['isolation'], related: [] },
       { id: 'ASI08', listId: 'agentic', name: 'Cascading Failures', desc: 'One agent breaks, and because agents are chained together, the failure propagates through the whole workflow.', themes: ['denial', 'output-integrity'], related: [] },
       { id: 'ASI09', listId: 'agentic', name: 'Data Leakage', desc: 'Agents pass sensitive data across trust boundaries during multi-step tasks without anyone noticing.', themes: ['data-leakage'], related: ['LLM02', 'MCP01', 'MCP10'] },
-      { id: 'ASI10', listId: 'agentic', name: 'Data Source Poisoning', desc: 'The data sources an agent relies on get corrupted, so the agent makes bad decisions based on bad information.', themes: ['data-poisoning'], related: ['LLM04', 'ML02', 'ML10'] },
+      { id: 'ASI10', listId: 'agentic', name: 'Data Source Poisoning', desc: 'The data sources an agent relies on get corrupted, so the agent makes bad decisions based on bad information.', themes: ['data-poisoning'], related: ['LLM05', 'ML02', 'ML10'] },
 
       // MCP Top 10
       { id: 'MCP01', listId: 'mcp', name: 'Token Mismanagement & Secret Exposure', desc: 'Credentials and secrets end up hard-coded, stored in model memory, or written to protocol logs where they shouldn\'t be.', themes: ['data-leakage'], related: ['LLM02', 'ASI09'] },
-      { id: 'MCP02', listId: 'mcp', name: 'Privilege Escalation via Scope Creep', desc: 'Permissions are defined loosely and grow over time. Eventually the agent can do things nobody intended to allow.', themes: ['privilege'], related: ['LLM06', 'ASI03', 'AST03'] },
+      { id: 'MCP02', listId: 'mcp', name: 'Privilege Escalation via Scope Creep', desc: 'Permissions are defined loosely and grow over time. Eventually the agent can do things nobody intended to allow.', themes: ['privilege'], related: ['LLM03', 'ASI03', 'AST03'] },
       { id: 'MCP03', listId: 'mcp', name: 'Tool Poisoning', desc: 'An attacker compromises a tool or injects malicious context so the model does their bidding.', themes: ['data-poisoning'], related: ['ASI06', 'AST01'] },
-      { id: 'MCP04', listId: 'mcp', name: 'Software Supply Chain Attacks', desc: 'A compromised dependency changes how the agent behaves or introduces a backdoor at execution level.', themes: ['supply-chain'], related: ['LLM03', 'ASI04', 'AST02', 'ML06'] },
+      { id: 'MCP04', listId: 'mcp', name: 'Software Supply Chain Attacks', desc: 'A compromised dependency changes how the agent behaves or introduces a backdoor at execution level.', themes: ['supply-chain'], related: ['LLM04', 'ASI04', 'AST02', 'ML06'] },
       { id: 'MCP05', listId: 'mcp', name: 'Command Injection & Execution', desc: 'The agent builds system commands from untrusted input and runs them. Classic injection, new context.', themes: ['injection', 'isolation'], related: ['LLM01', 'ASI05'] },
       { id: 'MCP06', listId: 'mcp', name: 'Intent Flow Subversion', desc: 'Hidden instructions in the context hijack what the agent is trying to do and redirect its control flow.', themes: ['injection'], related: ['LLM01', 'ASI01'] },
-      { id: 'MCP07', listId: 'mcp', name: 'Insufficient Auth & Authorization', desc: 'MCP servers or tools don\'t properly check who\'s calling them or what they should be allowed to do.', themes: ['privilege'], related: ['LLM06', 'ASI03'] },
+      { id: 'MCP07', listId: 'mcp', name: 'Insufficient Auth & Authorization', desc: 'MCP servers or tools don\'t properly check who\'s calling them or what they should be allowed to do.', themes: ['privilege'], related: ['LLM03', 'ASI03'] },
       { id: 'MCP08', listId: 'mcp', name: 'Lack of Audit & Telemetry', desc: 'Not enough logging. When something goes wrong, you can\'t tell what happened or when.', themes: ['governance'], related: ['AST09'] },
       { id: 'MCP09', listId: 'mcp', name: 'Shadow MCP Servers', desc: 'Someone spins up an MCP server that nobody approved, and it runs outside your security governance.', themes: ['governance'], related: ['AST09'] },
-      { id: 'MCP10', listId: 'mcp', name: 'Context Injection & Over-Sharing', desc: 'Sensitive information bleeds across tasks or users through shared context windows.', themes: ['data-leakage'], related: ['LLM02', 'LLM07', 'ASI06', 'ASI09'] },
+      { id: 'MCP10', listId: 'mcp', name: 'Context Injection & Over-Sharing', desc: 'Sensitive information bleeds across tasks or users through shared context windows.', themes: ['data-leakage'], related: ['LLM02', 'LLM08', 'ASI06', 'ASI09'] },
 
       // Agentic Skills Top 10
       { id: 'AST01', listId: 'skills', name: 'Malicious Skills', desc: 'Trojanized skills sitting in registries, waiting to be installed. The ClawHub malware campaign was a real-world example.', themes: ['supply-chain'], related: ['ASI04', 'MCP03'] },
-      { id: 'AST02', listId: 'skills', name: 'Supply Chain Compromise', desc: 'Attackers get into skill registries by poisoning dependencies or exploiting gaps in provenance tracking.', themes: ['supply-chain'], related: ['LLM03', 'ASI04', 'MCP04', 'ML06'] },
-      { id: 'AST03', listId: 'skills', name: 'Over-Privileged Skills', desc: 'Skills ask for more permissions than they need, and they usually get them. Research suggests 90% of AI agents are over-permissioned.', themes: ['privilege'], related: ['LLM06', 'ASI03', 'MCP02'] },
+      { id: 'AST02', listId: 'skills', name: 'Supply Chain Compromise', desc: 'Attackers get into skill registries by poisoning dependencies or exploiting gaps in provenance tracking.', themes: ['supply-chain'], related: ['LLM04', 'ASI04', 'MCP04', 'ML06'] },
+      { id: 'AST03', listId: 'skills', name: 'Over-Privileged Skills', desc: 'Skills ask for more permissions than they need, and they usually get them. Research suggests 90% of AI agents are over-permissioned.', themes: ['privilege'], related: ['LLM03', 'ASI03', 'MCP02'] },
       { id: 'AST04', listId: 'skills', name: 'Insecure Metadata', desc: 'A skill\'s metadata says one thing, but it does another. Enables impersonation and misplaced trust.', themes: ['supply-chain'], related: ['ASI04'] },
       { id: 'AST05', listId: 'skills', name: 'Unsafe Deserialization', desc: 'YAML/JSON skill configs get parsed in dangerous ways that can lead to code execution.', themes: ['isolation'], related: ['ASI05', 'MCP05'] },
       { id: 'AST06', listId: 'skills', name: 'Weak Isolation', desc: 'The sandbox isn\'t strong enough, so a skill can reach host-level resources it shouldn\'t be able to touch.', themes: ['isolation'], related: ['ASI05'] },
@@ -1220,15 +1220,15 @@
 
       // ML Security Top 10
       { id: 'ML01', listId: 'ml', name: 'Input Manipulation Attack', desc: 'Carefully crafted inputs cause the model to make wrong predictions or fail entirely. The classic adversarial example.', themes: ['injection'], related: ['LLM01', 'ASI01'] },
-      { id: 'ML02', listId: 'ml', name: 'Data Poisoning Attack', desc: 'Bad data gets into the training set and degrades the model\'s performance or plants malicious behaviours.', themes: ['data-poisoning'], related: ['LLM04', 'ASI10'] },
+      { id: 'ML02', listId: 'ml', name: 'Data Poisoning Attack', desc: 'Bad data gets into the training set and degrades the model\'s performance or plants malicious behaviours.', themes: ['data-poisoning'], related: ['LLM05', 'ASI10'] },
       { id: 'ML03', listId: 'ml', name: 'Model Inversion Attack', desc: 'An attacker works backwards from model outputs to reconstruct sensitive training data.', themes: ['data-leakage'], related: ['LLM02'] },
       { id: 'ML04', listId: 'ml', name: 'Membership Inference Attack', desc: 'An attacker can determine whether a specific person\'s data was in the training set. A privacy problem.', themes: ['data-leakage'], related: ['LLM02'] },
       { id: 'ML05', listId: 'ml', name: 'Model Theft', desc: 'The model itself gets stolen, either by repeated querying or through side-channel attacks.', themes: ['model-theft'], related: [] },
-      { id: 'ML06', listId: 'ml', name: 'AI Supply Chain Attacks', desc: 'Vulnerable dependencies or compromised components in the ML pipeline get used to tamper with the system.', themes: ['supply-chain'], related: ['LLM03', 'ASI04', 'MCP04', 'AST02'] },
-      { id: 'ML07', listId: 'ml', name: 'Transfer Learning Attack', desc: 'The pre-trained base model you\'re fine-tuning on has vulnerabilities baked in, and they carry over.', themes: ['data-poisoning'], related: ['LLM04', 'ML02'] },
+      { id: 'ML06', listId: 'ml', name: 'AI Supply Chain Attacks', desc: 'Vulnerable dependencies or compromised components in the ML pipeline get used to tamper with the system.', themes: ['supply-chain'], related: ['LLM04', 'ASI04', 'MCP04', 'AST02'] },
+      { id: 'ML07', listId: 'ml', name: 'Transfer Learning Attack', desc: 'The pre-trained base model you\'re fine-tuning on has vulnerabilities baked in, and they carry over.', themes: ['data-poisoning'], related: ['LLM05', 'ML02'] },
       { id: 'ML08', listId: 'ml', name: 'Model Skewing', desc: 'Data drift, feature manipulation, or statistical biases are used to shift model behaviour in the attacker\'s favour.', themes: ['data-poisoning'], related: ['ML02', 'ML10'] },
-      { id: 'ML09', listId: 'ml', name: 'Output Integrity Attack', desc: 'Model outputs or confidence scores get tampered with after prediction but before they reach the consumer.', themes: ['output-integrity'], related: ['LLM05'] },
-      { id: 'ML10', listId: 'ml', name: 'Model Poisoning', desc: 'The model itself is corrupted during training or inference, not just the data.', themes: ['data-poisoning'], related: ['LLM04', 'ML02'] },
+      { id: 'ML09', listId: 'ml', name: 'Output Integrity Attack', desc: 'Model outputs or confidence scores get tampered with after prediction but before they reach the consumer.', themes: ['output-integrity'], related: ['LLM10'] },
+      { id: 'ML10', listId: 'ml', name: 'Model Poisoning', desc: 'The model itself is corrupted during training or inference, not just the data.', themes: ['data-poisoning'], related: ['LLM05', 'ML02'] },
     ];
 
     const DECISION_OPTIONS = {
@@ -1252,8 +1252,8 @@
     const GAP_DATA = [
       {
         listId: 'llm',
-        unique: ['LLM07 System Prompt Leakage: only list that treats exposed system prompts as a top-level risk', 'LLM08 Vector & Embedding Weaknesses: RAG-specific attacks that no other list covers', 'LLM09 Misinformation: hallucinations and fabricated citations as a security problem'],
-        strengths: ['The original and most widely referenced of the 5 lists', 'Updated for 2025 with RAG and embedding attacks'],
+        unique: ['LLM08 Hidden Context Exposure: only list that treats leaked system prompts, configs, and tool schemas as a top-level risk', 'LLM09 Vector & Embedding Weaknesses: RAG-specific attacks that no other list covers', 'LLM07 Misinformation: hallucinations and fabricated citations as a security problem'],
+        strengths: ['The original and most widely referenced of the 5 lists', 'Only list ranked partly on real incident data, not just expert vote'],
         gaps: ['Nothing on agent-to-agent communication', 'Doesn\'t touch skill or plugin marketplace risks', 'Thin on runtime isolation'],
       },
       {
@@ -1290,19 +1290,19 @@
     // - egress: can communicate externally (send emails, web requests, webhooks)
     const TRIFECTA = {
       // Private data access
-      LLM02: ['data'], LLM06: ['data', 'egress'], LLM07: ['data'],
+      LLM02: ['data'], LLM03: ['data', 'egress'], LLM08: ['data'],
       ASI03: ['data'], ASI09: ['data', 'egress'],
       MCP01: ['data'], MCP02: ['data'], MCP10: ['data'],
       AST03: ['data'], AST06: ['data'],
       ML03: ['data'], ML04: ['data'],
       // Untrusted content consumption
-      LLM01: ['untrusted'], LLM04: ['untrusted'], LLM08: ['untrusted'],
+      LLM01: ['untrusted'], LLM05: ['untrusted'], LLM09: ['untrusted'],
       ASI01: ['untrusted'], ASI06: ['untrusted'], ASI10: ['untrusted'],
       MCP03: ['untrusted'], MCP06: ['untrusted'],
       AST01: ['untrusted'], AST04: ['untrusted'], AST05: ['untrusted'],
       ML01: ['untrusted'], ML02: ['untrusted'],
       // External communication / egress
-      LLM05: ['egress'],
+      LLM10: ['egress'],
       ASI02: ['egress'], ASI05: ['egress'], ASI07: ['egress'],
       MCP05: ['untrusted', 'egress'],
       AST10: ['egress'],
